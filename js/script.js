@@ -1,74 +1,45 @@
+/* Задание на урок:
+
+1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
+'Сколько фильмов вы уже посмотрели?'
+
+2) Создать объект personalMovieDB и в него поместить такие свойства:
+    - count - сюда передается ответ на первый вопрос
+    - movies - в это свойство поместить пустой объект
+    - actors - тоже поместить пустой объект
+    - genres - сюда поместить пустой массив
+    - privat - в это свойство поместить boolean(логическое) значение false
+
+3) Задайте пользователю по два раза вопросы:
+    - 'Один из последних просмотренных фильмов?'
+    - 'На сколько оцените его?'
+Ответы стоит поместить в отдельные переменные
+Записать ответы в объект movies в формате: 
+    movies: {
+        'logan': '8.1'
+    }
+
+Проверить, чтобы все работало без ошибок в консоли */
+
 "use strict";
 
-// ЗМІННІ
-let number5 = 5;
-let NUmber = 5;
+let numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?");
 
-const primeryConst = 34;
-
-// ТИПИ ДАННИХ
-
-//number = 24; //  число
-//string = "hfbvf"; // рядок записується в в лапках
-// booleans = false / true; // Булевий або логічний тип. Логічний тип може приймати лише два значення: true (істина) та false (хиба).
-// null; // спеціальне значення, яке представляє “нічого”, “порожнє” або “невідоме значення”.
-// undefined; // означає, що “значення не присвоєно”.
-// Symbol; //використовується для створення унікальних ідентифікаторів в об’єктах.
-// BigInt; // спеціальний числовий тип, який забезпечує підтримку цілих чисел довільної довжини. створюється через додавання n у кінець цілого числа
-
-//ОБЬЄКТИ
-
-let users = `nsnd`; // синтаксис "конструктора об’єктів"
-let user = {
-   // синтаксис "літералу об’єкта
-   name: "Іван", // за ключем "name" зберігаємо значення "Іван"
-   age: 30, // за ключем "age" зберігати значення "30"
+const personalMovieDB = {
+   count: numberOfFilms,
+   movies: {},
+   actors: {},
+   genres: [],
+   privat: true,
 };
-// отримаємо значення властивостей об’єкта:
 
-//    ОБЩЕНИЕ С ПОЛЬЗОВАТЕЛЕМ
+let lastVistFilm = prompt("Один из последних просмотренных фильмов?", ""),
+   lastVilmReiting = prompt("На сколько оцените его?", ""),
+   lastVistFilm2 = prompt("Один из последних просмотренных фильмов?", ""),
+   lastVilmReiting2 = prompt("На сколько оцените его?", "");
 
-// alert(user.name); // Іван
-// alert(user.age); // 30
-// let erroress = confirm(`lknlkve`);
-// let answer = prompt(`mv;lfv 18`, `17`);
-// console.log(erroress);
-// console.log(typeof erroress);
+personalMovieDB.movies[lastVistFilm] = lastVilmReiting;
+personalMovieDB.movies[lastVistFilm2] = lastVilmReiting2;
 
-// console.log(answer);
-// console.log(typeof answer);
-
-const personDecr = [];
-personDecr[0] = prompt(`цвет глаз`, `зеленый`);
-personDecr[1] = prompt(`цвет волос`, `белый`);
-personDecr[2] = prompt(`цвет кожи`, `коричневы`);
-
-// document.write(personDecr);
-
-// ИНТЕРПОЛЯЦИЯ
-let ketu = `штангу`;
-let ketuCount = 4;
-console.log(`подять ${ketu} ${ketuCount} раза`);
-
-//ОПЕРАРТОРЫ
-// + влажует числа и канкатинирует строк, + перед строкой содержащей цифры - меняет тип со строки на число
-console.log(4 + 4);
-console.log(`жвачка ` + `персик`);
-console.log(`4` + +`4`);
-console.log(4 + +`4`);
-// ++ инкримент - дискримент, префиксные - постфиксный (до и после)
-let incr = 10;
-let desc = 10;
-++incr;
-desc--;
-console.log(incr);
-console.log(desc);
-// % отдает ОСТАТОК от диления
-console.log(10 % 3);
-// = присвоение
-// == равенство (проверяет по значению)
-// === строгое равенство (проверяет по типу)
-console.log(4 + 4 == `8`);
-// && - и
-// || - или
-// ! - отрицание (не)
+console.log(personalMovieDB);
+// console.log(typeof personalMovieDB.count);
