@@ -95,24 +95,45 @@ if (4 == 6) {
 
 // тенарный оператор
 
-num == 5 ? console.log(`true`) : console.log(`false`);
+// num == 5 ? console.log(`true`) : console.log(`false`);
 
-// switch case
-let num = 4;
-switch (num) {
-   case 6:
-      console.log(`менше`);
-      break;
-   case 10:
-      console.log(`менше`);
-      break;
-   case 3:
-      console.log(`больше`);
-      break;
-   case 5:
-      console.log(`ОК`);
-      break;
-   default:
-      console.log(`не угодал`);
-      break;
+// // switch case
+// let num = 4;
+// switch (num) {
+//    case 6:
+//       console.log(`менше`);
+//       break;
+//    case 10:
+//       console.log(`менше`);
+//       break;
+//    case 3:
+//       console.log(`больше`);
+//       break;
+//    case 5:
+//       console.log(`ОК`);
+//       break;
+//    default:
+//       console.log(`не угодал`);
+//       break;
+// }
+
+//---------------------------------------------------------------------------
+//                            ЦЫКЛЫ
+//---------------------------------------------------------------------------
+
+// let num = 5;
+
+while (num < 53) {
+   console.log(num);
+   num++;
+}
+
+do {
+   console.log(num);
+   num++;
+} while (num <= 9);
+
+for (let index = 0; index <= 6; index++) {
+   console.log(num);
+   num++;
 }
