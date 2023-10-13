@@ -234,3 +234,65 @@ const data = [5, 10, "Shopping", 20, "Homework"];
 for (let i = 1; i <= data.length; i++) {
    result[i - 1] = data[data.length - i];
 }
+
+// _______________________________________________________________
+//                         ФУНКЦИИ
+//----------------------------------------------------------------
+
+function chowFirstMassege(text) {
+   console.log(text);
+}
+chowFirstMassege("hello word");
+
+// function declaration
+// ------------------------------------------------
+function calc(x, r, t) {
+   return x + r - t;
+}
+console.log(calc(3, 6, 7));
+
+// function expresion
+// ------------------------------------------------
+let func = function (x, r, t) {
+   return x + r - t;
+};
+console.log(func(3, 32, 7));
+
+// function Arrow (стрелочная функция)
+// ------------------------------------------------
+let funcArrow = (x, r, t) => {
+   return x + r - t;
+};
+console.log(funcArrow(3, 6, 12));
+
+// Решение задач по функциях
+// ------------------------------------------------
+function sayHello(name) {
+   return `Привет ${name}`;
+}
+console.log(sayHello("Антон"));
+
+function returnNeighboringNumbers(num) {
+   let numbers = [];
+   numbers[0] = num - 1;
+   numbers[1] = num;
+   numbers[2] = num + 1;
+   return numbers;
+}
+console.log(returnNeighboringNumbers());
+
+function getMathResult(num, count) {
+   if (typeof count != "number" || count <= 0) {
+      return num;
+   }
+   let str = "";
+   for (let i = 1; i <= count; i++) {
+      if (i === count) {
+         str += `${num * i}`;
+      } else {
+         str += `${num * i}---`;
+      }
+   }
+   return str;
+}
+console.log(getMathResult(5, 3));
