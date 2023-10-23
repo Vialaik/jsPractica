@@ -571,3 +571,19 @@ console.log(isBudgetEnough(shoppingMallData));
 const students = ["Peter", "Andrew", "Ann", "Mark", "Josh", "Sandra", "Cris", "Bernard", "Takesi", "Sam"];
 function sortStudentsByGroups(arr) {}
 console.log(sortStudentsByGroups(students));
+
+// _______________________________________________________________
+//                   Динамическая типезация
+//----------------------------------------------------------------
+
+// Преоброзование в строку
+//  1) String (String(4))
+//  2) Конкатинация со строкой (5 + "")
+// Преоброзование в число
+//  1)Number (Number('4'))
+//  2)Унарный плюс (+('4'))
+//  2)parseInt (parseint('15px'))
+// Преоброзование а логическое(boolean) значени
+//  1) в Fals => 0, '', null, NaN
+//  2) Boolean()
+//  3) !! (!!"4")
